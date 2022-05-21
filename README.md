@@ -9,32 +9,9 @@ Na nossa Aula!
   - Eventos;
 - Iniciaremos o Projeto ToDoList
 
-    Desafio 
-
 
 <br>
 
-## Apresentação
-
-### Quem é a professora Lilit?
-
-<img src='./assets/lilit.jpg' width=200 alt='selfie de Lilit com cabelos cacheados longos, blusa preta, baton vinho e delineador preto, o fundo está desfocado'>
-
-[Lilit Bandeira](https://www.instagram.com/lilitbandeira), é uma travesti paraibana residente no Recife, Software Engineer na Sanar, desenvolvedora Fullstack, ex-aluna {reprograma} e estudante de Cinema e Audiovisual na UFPE;
-
-#### Contatos
-
-- E-mail: devlilitbandeira@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/lilitbandeira)
-- [GitHub](https://github.com/lilitbandeira)
-
-### Quem são as monitoras?
-
-<img src='./assets/nicoRobin.jpeg' width=500 alt='personagem nico robin do anime one piece, ela tem cabelos pretos amarrados para trás com duas mechas soltas na frente, olhos verdes, veste uma jaqueta azul e tem óculos de sol sob os cabelos, seus braços estão cruzados na frente do corpo e possuem cor preta e uma aura azul, ao fundo o universo com pétalas de flores e uma lótus aberta'>
-
-### Quem são as alunas?
-
-<img src='./assets/sailorMoon.jpeg' width=500 alt='5 personagens do anime sailor moon, todas vestem vestidinho curto colegial, cada uma com uma cor, esquerda para direita temos a primeira com cabelos longos loiros com vestido laranja e laço azul escuro, segunda com cabelos pretos longos e vestido vermelho com laço roxo, no meio uma de cabelos loiros longos amarrados em dois coques laterais, vestido azul e laço vermelho, a quarta tem cabelos curtos verdes e vestido e laço azul claro, a quinta tem cabelos castanhos amarrados e usa vestido verde com laço rosa, ao fundo a cidade de toquio a noite e uma lua crescente'>
 
 ## Acordos
 
@@ -50,8 +27,6 @@ Na nossa Aula!
 - Este projeto tem como objetivo exercitar os conceitos aprendidos até aqui: Lógica, HTML, CSS e JavaScript;
 - Não é permitido o uso de nenhuma biblioteca/framework para construção do projeto;
 - Temos um layout que deve ser seguido, mas é permitido incrementar seu projeto para entregar; 
-
-##### [Projeto modelo](https://reprograma-on13front-todolist.vercel.app)
 
 ### Instruções:
 
@@ -233,7 +208,6 @@ Usamos o método preventDefault() para cancelar a ação padrão que pertence a 
   - [x] __3.5__ Marcar item como realizado;
   - [x] __3.6__ Poder excluir itens da lista individualmente;
   - [x] __3.7__ Limpar lista, excluir todos os itens da lista;
-  - [x] __3.8__ Ao clicar em marcar todos, mudar texto do botão para desmarcar todos;
     
     ##### Para usar no projeto: 🔘 🟢 🟣 🗑
 #### 2.2. Desafio
@@ -254,8 +228,6 @@ Usamos o método preventDefault() para cancelar a ação padrão que pertence a 
 
 ## Agradecimento:  
 
-- [Professora Lorena Rabelo](https://www.linkedin.com/in/lorena-rabelo/), de quem usei o repositório do projeto da turma 10 como referência;
-- [Professota Barbara Aguilar](https://www.linkedin.com/in/barbara-aguilar/), de quem peguei parte do conteúdo da revisão no repositório de JavascriptI da turma 8;
-- [Professora Anna Flávia](https://www.linkedin.com/in/anna-flávia-2691a754/), de quem também peguei parte do conteúdo da revisão no repositório de Revisão da turma 6;
+- [Professora Liliti]de quem usei o repositório do projeto da turma 10 como referência;
 
 E todas as minhas professoras e amigas do {reprograma} com quem sempre aprendo ♥️
