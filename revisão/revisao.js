@@ -1,5 +1,13 @@
 // ------------ Objeto ------------
 
+const monitora = {
+    nome: 'Jaque'
+    idade: 'Idade'
+};
+
+const {monitora} = nome;
+
+console.log(nome);
 
 
 
