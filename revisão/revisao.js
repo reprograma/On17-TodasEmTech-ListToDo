@@ -1,8 +1,6 @@
 // ------------ Objeto ------------
 
 
-
-
 // ------------Array--------------
 
 // Dentre os tipos de dados no temos o array, que é uma lista, que é amplamente utilizada e de criação simples
