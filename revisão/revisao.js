@@ -18,7 +18,14 @@
 // Existem muitos Métodos já implementados para manipular os arrays
 // push(), pop(), find(), filter(), map(), forEach()...
 
+const conta = [15, 10, 3, 19]
+const valor = 0;
+const soma = conta.reduce (
+(valorInicial, valorFinal) => valorInicial + valorFinal,
+valor
+);
 
+console.log(soma);
 
 // ------------DOM--------------------
 
