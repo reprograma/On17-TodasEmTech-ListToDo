@@ -149,7 +149,6 @@ Na nossa Aula!
 
 #### 1.3. DOM
   
-<img src='./assets/dom.png' width=500 alt='árvore de estrutura do DOM'>
 
   __>__ DOM é uma sigla que significa Document Object Model. Quando a página é carregada o browser cria um objeto que representa os elementos da página a partir do HTML. A forma mais fácil de acessar e manipular o DOM é usando JavaScript.
 
@@ -213,7 +212,7 @@ Usamos o método preventDefault() para cancelar a ação padrão que pertence a 
 #### 2.2. Desafio
 
 - Quando a usuária tentar criar uma tarefa com uma string vazia ou somente com espaços, criar uma mudança visual em vermelho no input e informar o erro no placehoder;
-- Marcar e desmarcar todos os itens como feito trocando o nome do botão 'desmarcar todos´
+- Marcar e desmarcar todos os itens como feito trocando o nome do botão 'desmarcar todos'.
 
 ## Referências 
 
