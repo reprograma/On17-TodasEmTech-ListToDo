@@ -1,4 +1,3 @@
-
 //Capturar entradas/elementos em variáveis
 
 const novaTarefaInput = document.querySelector('#input_id')
@@ -12,6 +11,7 @@ const containerDeTarefas = document.getElementById('tarefas_id')
 // contianer principal que guarda a lista (ul) das tarefas
 const form =  document.getElementById('form_id')
 // capturando meu formulário
+const botaoLimpa = document.getElementById('botao_limpa_id'); // capturando o botão 'marcar Limpar lista'
 
 
 
@@ -59,5 +59,24 @@ botaoAdd.addEventListener('click', (evento) => {
 
     })
 
+    iconeDeleta.addEventListener('click', () => {
+        elementoLista.remove()
 
+        if(listaDeTarefas.innerText === '') {
+            // se o container de tarefas estiver vazio 
+
+            modelo.style.display = "flex" // remove o display none do esqueleto e coloca um flx para aparecer em tela
+            containerDeTarefas.style.display = "none" // remove o container de tarefas da tela
+
+        }
+    })
+
+})
+
+
+botaoLimpa.addEventListener('click', () => {
+    listaDeTarefas.remove()
+    // listaDeTarefas.innerHTML = ''
+    modelo.style.display = 'flex'
+    containerDeTarefas.style.display = 'none'
 })
