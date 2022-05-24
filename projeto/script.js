@@ -4,12 +4,12 @@ const novaTarefaInput = document.querySelector('#input_id')
 // capturando o input
 const botaoAdd = document.querySelector('#botao_add_id')
 // capturando o botão de add
-const listaDeTarefas = document.getElementById('lista_id'); 
+const listaDeTarefas = document.getElementById('lista_id');
 // capturando  a lista que vai guardar as tarefas
 const modelo = document.getElementById('modelo_id') // captura o esqueleto verdinho da tarefa 
-const containerDeTarefas = document.getElementById('tarefas_id') 
+const containerDeTarefas = document.getElementById('tarefas_id')
 // contianer principal que guarda a lista (ul) das tarefas
-const form =  document.getElementById('form_id')
+const form = document.getElementById('form_id')
 // capturando meu formulário
 const botaoLimpa = document.getElementById('botao_limpa_id'); // capturando o botão 'marcar Limpar lista'
 
@@ -26,24 +26,24 @@ botaoAdd.addEventListener('click', (evento) => {
     // cria o item da lista que nao existe no HTML
 
 
-    if(novaTarefaInput.value.trim() === '') {
-        alert("digite alguma tarefa") 
+    if (novaTarefaInput.value.trim() === '') {
+        alert("digite alguma tarefa")
 
     } else {
-    
-        textoTarefa.innerText = novaTarefaInput.value 
+
+        textoTarefa.innerText = novaTarefaInput.value
         // iguala dentro do parágrafo criado para ser igual ao valor digitado no input
         iconeDeleta.innerText = "🗑"
         // adiciona dentro do spam criado esse icone de lixeiro
-    
-    
+
+
         listaDeTarefas.appendChild(elementoLista) //elemento ul do HTML adotando o item da lista craido mais em cima
         elementoLista.appendChild(textoTarefa) // o item da lista adotando o texto criado mais em cima 
         elementoLista.appendChild(iconeDeleta) // o item da lista tb adota o lixeiro junto com o texto
-    
+
         modelo.style.display = 'none'
         containerDeTarefas.style.display = "block" // coloca  div de tarefas com display block para elas aprarecerem na tela por padrao tudo tem display block no html
-         
+
         form.reset() // reseta o formulário para n aparecer no input o ultimo texto
     }
 
@@ -62,7 +62,7 @@ botaoAdd.addEventListener('click', (evento) => {
     iconeDeleta.addEventListener('click', () => {
         elementoLista.remove()
 
-        if(listaDeTarefas.innerText === '') {
+        if (listaDeTarefas.innerText === '') {
             // se o container de tarefas estiver vazio 
 
             modelo.style.display = "flex" // remove o display none do esqueleto e coloca um flx para aparecer em tela
@@ -75,8 +75,7 @@ botaoAdd.addEventListener('click', (evento) => {
 
 
 botaoLimpa.addEventListener('click', () => {
-    listaDeTarefas.remove()
-    // listaDeTarefas.innerHTML = ''
+    listaDeTarefas.innerHTML = ''
     modelo.style.display = 'flex'
     containerDeTarefas.style.display = 'none'
 })
