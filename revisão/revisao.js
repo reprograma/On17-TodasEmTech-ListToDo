@@ -1,4 +1,3 @@
-
 // ------------ Objeto ------------
 
 // propriedades - chave: valor,
@@ -14,7 +13,6 @@ const aluna = new Object()
 aluna.nome = 'Raissa'
 
 // console.log(aluna);
-
 
 // console.log(usuario.login);
 
@@ -44,9 +42,7 @@ const frutaEscolhida = frutas.find((elementoNoArray) => elementoNoArray  === '�
 
 // const executarEmTodos = frutas.map((elemento) => console.log(elemento))
 
-// [mçanEm10, uvaEm10,maEm10, bananEM10,..... ]
-
-
+// [mçanEm10, uvaEm10,maEm10, bananEm10,..... ]
 
 
 // O acesso de cada elemento dentro do array se da pelo index,sabendo qual a posição daquele elemento na lista
@@ -63,13 +59,8 @@ const sumWithInitial = conta.reduce(
 // console.log(sumWithInitial);
 
 
-
-
 // Existem muitos Métodos já implementados para manipular os arrays
 // push(), pop(), find(), filter(), map(), forEach()...
-
-
-
 
 
 // ------------DOM--------------------
@@ -94,7 +85,6 @@ console.log(id);
 
 const botao = document.createElement('button')
 botao.appendChild(id)
-
 
 
 // -----------Eventos------------------
