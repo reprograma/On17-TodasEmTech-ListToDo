@@ -14,7 +14,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: #ff9ff370;
+  background-color: #9fcdff70;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ body {
 
 
 .checked:before {
-  content: "🟣";
+  content: "🟢";
 }
 
 .container_principal {
@@ -172,8 +172,8 @@ li > p {
 }
 
 .button_limpa {
-  background: #f368e0;
-  border: solid 1px #f368e0;
+  background: #f36868;
+  border: solid 1px #f36868;
 }
 
 .button_limpa, .button_marca {
@@ -193,7 +193,7 @@ li > p {
 
 .button_limpa:hover {
   background: #f3f3f3;
-  color: #f368e0;
+  color: #f36868;
   transition: linear .3s;
 }
 
