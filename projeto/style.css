@@ -14,7 +14,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: #ff9ff370;
+  background-image: url(https://images3.alphacoders.com/103/1034504.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ body {
 }
 
 .container_principal {
-  background-color: #f3f3f3;
+  background-color: #f3f3f339;
   min-width: 40rem; /* 400px */
   max-height: 60vh;
   padding: 2.5rem;
@@ -36,13 +36,13 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  box-shadow: 2px 4px 10px #57657450;
+  box-shadow: 2px 4px 10px #5b024f50;
 }
 
 .titulo_lista {
   margin: 2rem 0 3rem 0;
   font-size: 2.5rem;
-  color: #2e86de;
+  color: #a4dff3;
 }
 
 /* formulario */
@@ -58,20 +58,20 @@ body {
   width: 30rem;
   height: 100%;
   padding: 1.2rem 1rem;
-  background-color: #c8d6e5;
+  background-color: #e3c8e5;
   outline: none;
-  border: solid 1px #c8d6e5;
+  border: solid 1px #e3c8e5;
   border-radius: .8rem 0 0 .8rem;
   font-size: 1.4rem;
 }
 
 .input_add:focus {
-  border: solid 1px #00d2d3;
+  border: solid 1px #f745b3;
   border-right: none;
 }
 
 .button_add  {
-  background-color: #54a0ff;
+  background-color: #ec04a6;
   color: #f3f3f3;
   padding: 0 1rem;  
   font-size: 1.5rem;
@@ -83,7 +83,7 @@ body {
 }
 
 .button_add:hover {
-  background-color: #2e86de;
+  background-color: #f686b6;
   transition: linear .3s;
 }
 
@@ -107,7 +107,7 @@ body {
 li {
   display: flex;
   justify-content: space-between;
-  color: #222f3e;
+  color: #48c3f7;
   padding: .8rem .5rem;
 }
 
@@ -141,14 +141,14 @@ li > p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: #8395a770;
+  background: #f997e970;
   border-radius: 1rem;
   padding: 1rem; 
 }
 
 .modelo_conteudo {
   padding: .8rem .5rem;
-  background: #c3f3d990;
+  background: #fbc0ed90;
   border-radius: .5rem;
 }
 
@@ -167,8 +167,8 @@ li > p {
 }
 
 .button_marca {
-  background: #54a0ff;
-  border: solid 1px #54a0ff;
+  background: #ff54bb;
+  border: solid 1px #ff54bb;
 }
 
 .button_limpa {
@@ -187,7 +187,7 @@ li > p {
 
 .button_marca:hover {
   background: #f3f3f3;
-  color: #54a0ff;
+  color: #ff54e5;
   transition: linear .3s;
 }
 
@@ -223,7 +223,7 @@ li > p {
   }
 
   .input_add:focus {
-    border-right: solid 1px #00d2d3;
+    border-right: solid 1px #d30097;
   }
 
   .button_add {

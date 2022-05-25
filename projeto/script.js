@@ -18,7 +18,9 @@ const containerDeTarefas = document.getElementById('tarefas_id')
 // contianer principal que guarda a lista (ul) das tarefas
 const form =  document.getElementById('form_id')
 // capturando meu formulário
-const botaoLimpa = document.getElementById('botao_limpa_id'); // capturando o botão 'marcar Limpar lista'
+const botaoLimpa = document.getElementById('botao_limpa_id') // capturando o botão 'marcar Limpar lista'
+
+const botaoMarca = document.getElementById('botao_marca_id')
 
 
 
@@ -87,3 +89,25 @@ botaoLimpa.addEventListener('click', () => {
     modelo.style.display = 'flex'
     containerDeTarefas.style.display = 'none'
 })
+
+botaoMarca.addEventListener('click', () => {
+    // o querySelectorALl retorna um array com itens de acordo o passado como parâmetro
+  
+  
+    if (botaoMarca.innerText === 'Marcar todos') {
+        const todosParagrafos = document.querySelectorAll('p'); //Selecionou todos os p que estavam na lista//
+        console.log(todosParagrafos, "vai retornar todos os <p> encontrados");
+  
+        todosParagrafos.forEach(item => {
+            item.classList.add("checked");
+        }); //Procurou e add checked em todos os elementos, fazendo todos ficarem com o circulo roxo//
+        botaoMarca.innerText = 'Desmarcar todos'; //Mudou de "Marca todas" para "Desmarcar todos"//
+    } else {
+        const todosParagrafos = document.querySelectorAll('p');
+        todosParagrafos.forEach(item => {
+            item.classList.remove("checked");
+        });//Procurou e add checked em todos os elementos, fazendo todos ficarem com o circulo cinza, desfazendo  primeiro click//
+        botaoMarca.innerText = 'Marcar todos';  //Mudou de "Desmarcar" para "Marcar Todas"//
+    }
+  
+  });
