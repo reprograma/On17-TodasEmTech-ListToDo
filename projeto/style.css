@@ -14,7 +14,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: #ff9ff370;
+  background-color: #a6ade970;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ body {
 
 
 .container_principal {
-  background-color: #f3f3f3;
+  background-color: #c7c8eb;
   min-width: 40rem; /* 400px */
   max-height: 60vh;
   padding: 2.5rem;
