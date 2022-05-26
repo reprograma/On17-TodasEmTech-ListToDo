@@ -65,6 +65,7 @@ body {
   font-size: 1.4rem;
 }
 
+
 .input_add:focus {
   border: solid 1px #00d2d3;
   border-right: none;
