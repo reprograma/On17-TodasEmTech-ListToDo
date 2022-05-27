@@ -28,7 +28,8 @@ body {
 
 .container_principal {
   background-color: #f3f3f3;
-  min-width: 40rem; /* 400px */
+  min-width: 40rem;
+  /* 400px */
   max-height: 60vh;
   padding: 2.5rem;
   display: flex;
@@ -70,10 +71,10 @@ body {
   border-right: none;
 }
 
-.button_add  {
+.button_add {
   background-color: #54a0ff;
   color: #f3f3f3;
-  padding: 0 1rem;  
+  padding: 0 1rem;
   font-size: 1.5rem;
   border-radius: 0 .8rem .8rem 0;
   /*border-radius: top-left top-right bottom-right bottom-left*/
@@ -104,6 +105,11 @@ body {
   flex-direction: column;
 }
 
+.erro {
+  border: 2px solid red;
+}
+
+
 li {
   display: flex;
   justify-content: space-between;
@@ -111,26 +117,28 @@ li {
   padding: .8rem .5rem;
 }
 
-li > p, li > span {
+li>p,
+li>span {
   font-size: 1.4rem;
 }
 
-li > p:before {
+li>p:before {
   content: "🔘";
   font-size: 1.2rem;
   margin-right: .5rem;
 }
 
-li > p {
+li>p {
   width: 80%;
 }
+
 
 /* container modelo */
 
 .modelo {
   width: 95%;
   min-height: 10rem;
-  padding: 1rem 0; 
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -143,7 +151,7 @@ li > p {
   justify-content: space-around;
   background: #8395a770;
   border-radius: 1rem;
-  padding: 1rem; 
+  padding: 1rem;
 }
 
 .modelo_conteudo {
@@ -176,7 +184,8 @@ li > p {
   border: solid 1px #f36868;
 }
 
-.button_limpa, .button_marca {
+.button_limpa,
+.button_marca {
   color: #f3f3f3;
   padding: 1.2rem 1rem;
   font-size: 1.5rem;
@@ -205,10 +214,10 @@ li > p {
     min-width: 30rem;
     padding: 1.5rem;
   }
-  
+
   .titulo_lista {
     margin: 2rem 0;
-  font-size: 2rem;
+    font-size: 2rem;
   }
 
   .form_add {
@@ -239,11 +248,11 @@ li > p {
 
   .modelo {
     min-height: 7rem;
-    padding: .5rem 0; 
+    padding: .5rem 0;
   }
 
   .modelo_tarefa {
-    padding: .7rem; 
+    padding: .7rem;
   }
 
   .modelo_conteudo {
@@ -256,12 +265,14 @@ li > p {
     margin: 2rem;
   }
 
-  .button_marca, .button_limpa {
+  .button_marca,
+  .button_limpa {
     padding: .5rem;
     font-size: 1.3rem;
     width: 100%;
   }
+
   .button_limpa {
-    margin-top: .5rem ;
+    margin-top: .5rem;
   }
 }

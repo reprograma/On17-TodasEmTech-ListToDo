@@ -28,8 +28,13 @@ botaoAdd.addEventListener("click", (evento) => {
   if (novaTarefaInput.value.trim() === "") {
     novaTarefaInput.setAttribute(
       "placeholder",
-      "Tarefa inválida, digite novamente!"
+      "Tarefa inválida, digite novamente!"   
     );
+
+    novaTarefaInput.classList.add('erro');
+  
+   
+
   } else {
     novaTarefaInput.setAttribute("placeholder", "Adicione uma tarefa");
     textoTarefa.innerText = novaTarefaInput.value;
@@ -55,6 +60,7 @@ botaoAdd.addEventListener("click", (evento) => {
     //     textoTarefa.classList.remove('checked')
     // }
     textoTarefa.classList.toggle("checked"); //forma mais simples de fazer
+
   });
 
 
@@ -77,29 +83,30 @@ botaoLimpa.addEventListener("click", () => {
   listaDeTarefas.innerHTML = "";
   modelo.style.display = "flex";
   containerDeTarefas.style.display = "none";
+  novaTarefaInput.classList.remove('erro');
 });
 
 
 
 
-botaoMarca.addEventListener('click', () => {
+botaoMarca.addEventListener('click', (evento) => {
   // o querySelectorALl retorna um array com itens de acordo o passado como parâmetro
 
 
   if (botaoMarca.innerText === 'Marcar todos') {
-      const todosParagrafos = document.querySelectorAll('p'); //Selecionou todos os p que estavam na lista//
-      console.log(todosParagrafos, "vai retornar todos os <p> encontrados");
+    const todosParagrafos = document.querySelectorAll('p'); //Selecionou todos os p que estavam na lista//
+    console.log(todosParagrafos, "vai retornar todos os <p> encontrados");
 
-      todosParagrafos.forEach(item => {
-          item.classList.add("checked");
-      }); //Procurou e add checked em todos os elementos, fazendo todos ficarem com o circulo roxo//
-      botaoMarca.innerText = 'Desmarcar todos'; //Mudou de "Marca todas" para "Desmarcar todos"//
+    todosParagrafos.forEach(item => {
+      item.classList.add("checked");
+    }); //Procurou e add checked em todos os elementos, fazendo todos ficarem com o circulo roxo//
+    botaoMarca.innerText = 'Desmarcar todos'; //Mudou de "Marca todas" para "Desmarcar todos"//
   } else {
-      const todosParagrafos = document.querySelectorAll('p');
-      todosParagrafos.forEach(item => {
-          item.classList.remove("checked");
-      });//Procurou e add checked em todos os elementos, fazendo todos ficarem com o circulo cinza, desfazendo  primeiro click//
-      botaoMarca.innerText = 'Marcar todos';  //Mudou de "Desmarcar" para "Marcar Todas"//
+    const todosParagrafos = document.querySelectorAll('p');
+    todosParagrafos.forEach(item => {
+      item.classList.remove("checked");
+    }); //Procurou e add checked em todos os elementos, fazendo todos ficarem com o circulo cinza, desfazendo  primeiro click//
+    botaoMarca.innerText = 'Marcar todos'; //Mudou de "Desmarcar" para "Marcar Todas"//
   }
 
 });
