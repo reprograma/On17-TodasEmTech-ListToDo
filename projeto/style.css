@@ -70,6 +70,10 @@ body {
   border-right: none;
 }
 
+.espaco{
+  border: 2px solid #ff0000;
+}
+
 .button_add  {
   background-color: #54a0ff;
   color: #f3f3f3;
