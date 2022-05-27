@@ -14,7 +14,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: #ff9ff370;
+  background: linear-gradient(#e66465, #9198e5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ body {
 
 
 .checked:before {
-  content: "🟣";
+  content: "✅";
 }
 
 .container_principal {
