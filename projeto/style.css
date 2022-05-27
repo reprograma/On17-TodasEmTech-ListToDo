@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* resets */
 
 * {
   margin: 0;
@@ -21,6 +20,31 @@ body {
 }
 
 
+.erro {
+  animation: alerta .3s linear;
+}
+
+@keyframes alerta {
+  0% {
+    border: solid 1px #ee5253;
+    background-color: #ff6b6b50;
+  }
+  25% {
+    border: solid 1px #c8d6e5;
+  }
+  50% {
+    border: solid 1px #ee5253;
+  }
+  75% {
+    border: solid 1px #c8d6e5;
+  }
+  100% {
+    border: solid 1px #ee5253;
+    background-color: #ff6b6b50;
+  }
+}
+
+
 
 .checked:before {
   content: "🟣";
@@ -28,7 +52,7 @@ body {
 
 .container_principal {
   background-color: #f3f3f3;
-  min-width: 40rem; /* 400px */
+  min-width: 40rem;
   max-height: 60vh;
   padding: 2.5rem;
   display: flex;
@@ -44,8 +68,6 @@ body {
   font-size: 2.5rem;
   color: #2e86de;
 }
-
-/* formulario */
 
 .form_add {
   display: flex;
@@ -76,7 +98,6 @@ body {
   padding: 0 1rem;  
   font-size: 1.5rem;
   border-radius: 0 .8rem .8rem 0;
-  /*border-radius: top-left top-right bottom-right bottom-left*/
   border: none;
   cursor: pointer;
   transition: linear .3s;
@@ -87,7 +108,6 @@ body {
   transition: linear .3s;
 }
 
-/* container de tarefas */
 
 .container_tarefas {
   width: 95%;
@@ -125,8 +145,6 @@ li > p {
   width: 80%;
 }
 
-/* container modelo */
-
 .modelo {
   width: 95%;
   min-height: 10rem;
@@ -156,8 +174,6 @@ li > p {
   opacity: .6;
 }
 
-
-/* container dos botões */
 
 .container_botoes {
   width: 95%;
@@ -197,8 +213,6 @@ li > p {
   transition: linear .3s;
 }
 
-
-/* responsividade */
 
 @media only screen and (max-width: 480px) {
   .container_principal {
@@ -251,7 +265,6 @@ li > p {
   }
 
   .container_botoes {
-    /* width: 100%; */
     flex-direction: column;
     margin: 2rem;
   }
