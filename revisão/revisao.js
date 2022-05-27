@@ -1,70 +1,110 @@
-const aluna = new Object()
-aluna.nome = "Nayara"
-aluna.curso = "frontend"
+/ ------------ Objeto ------------
 
-//objeto ->  chave: valor
-
-const monitora = {
-  nome: "Thiele",
-  curso: "frontend"
+// propriedades - chave: valor,
+const usuario = {
+  login:'azul',
+  senha: '',
+  foto:'',
+  bio: 'andar()',
 }
 
-monitora.cidade = "Barueri"
+const aluna = new Object()
 
-// console.log(monitora.cidade)
-// console.log(aluna.curso)
+aluna.nome = 'Raissa'
 
-const { nome, cidade } = monitora
-
-// console.log(cidade)
-//Arrays -> [0, 1, 2, 3, 4, 5, 6, 7]
-
-const alunas = Array.of('Julia', 'Celina', 'Bruna')
-const cursos = ['frontend', 'backend']
-
-const alfabeto = "ABCDE"
-
-const arrayAlfabeto = alfabeto.split('')
-
-const arrayPalavras = "oi minha gente".split('')
-
-// console.log()
-
-// function somar(numero) {
-//   return console.log(numero + numero)
-// }
-
-// somar(2)
-
-const frutas = ['🍎', '🍇', '🍎', '🍌', '🍎', '🥑']
-
-// console.log(frutas.length) //length é propriedade, trás informações
-// métodos possuem (), executam alguma coisa
-
-// callback
-
-const encontrarElemento = frutas.find((elemento) => elemento == '🍌')
-const FiltrarPor = frutas.filter((elemento) => elemento == '🍎')
-const executarEmTodos = frutas.map((fruta) => fruta = "🍇" )
-const verTodos = frutas.forEach((fruta) => console.log(fruta)) 
-
-console.log(verTodos)
-console.log(frutas)
+// console.log(aluna);
 
 
-// function callbackFind(elemento) {
-//   return elemento == "🍎"
-// }
+// console.log(usuario.login);
+
+const monitora = {
+  nome: 'Jaque',
+  cidade: 'Bahia',
+};
+
+const { nome } = monitora;
+
+// console.log(nome);
 
 
 
-// const numeros = [1, 2, 3, 4]
 
-// const nova = numeros.map(numero => numero * 2)
-
-// console.log(nova)
+// ------------Array--------------
 
 
-.innerText
+// Dentre os tipos de dados no temos o array, que é uma lista, que é amplamente utilizada e de criação simples
+// [1, 2, true, 'água']
 
-document.querySelector()
+const frutas = ['🍎', '🍇', '🍎', '🍌', '🍎', '🥑'] // eu consigo iterar sobre esse array; oque é iterar; 
+
+// console.log(frutas[4]); 
+
+const frutaEscolhida = frutas.find((elementoNoArray) => elementoNoArray  === '🍌' )
+
+// console.log(frutaEscolhida);
+
+// const executarEmTodos = frutas.map((elemento) => console.log(elemento))
+
+// [mçanEm10, uvaEm10,maEm10, bananEM10,..... ]
+
+
+
+
+// O acesso de cada elemento dentro do array se da pelo index,sabendo qual a posição daquele elemento na lista
+// Esse array pode ser com tipos de dados diferentes no javascript
+// [1, 2, true, 'água']
+//  0  1    2     3
+
+const conta = [15, 10, 3, 19]
+const initialValue = 0;
+const sumWithInitial = conta.reduce(
+  (previousValue, currentValue )=> previousValue + currentValue,
+  initialValue
+);
+// console.log(sumWithInitial);
+
+
+
+
+// Existem muitos Métodos já implementados para manipular os arrays
+// push(), pop(), find(), filter(), map(), forEach()...
+
+
+
+
+
+// ------------DOM--------------------
+
+// HTML convertido num objeto javascript
+// exemplo no mundo real da campainha 
+// API DOM do tipo arvore criada pelo browser, o JS usa DOM para manipular o HTML
+// getElementByClassName() - HTMLCollection - colecao de elemntos do HTML que possuem aquela classe 
+// getElementByTagName() - HTMLCollection
+// getElementById() - Element tras o elemento completo do HTML e com isso vc já consegue acessar as propriedades disponiveis daquele elemento como valor 
+// querySelector() - Element pega o primeiro que ele achar e vc precisa declarar o tipo do seletor na hora de escrever
+// querySelectorAll() - NodeList - coleção de nós, uma lista com todos os elementos que contem aquele seletor, e eu consigo utilizar os métodos de array nele
+// 
+// const elements = document.querySelectorAll('one')     elements.forEach(element => console.log(element))
+// A necessidade do uso varia pela forma que vc precisa acessar o dado
+
+
+const titulo =  document.querySelectorAll(".myclass");
+console.log('--------', titulo);
+const id = document.getElementById('lala')
+console.log(id);
+
+const botao = document.createElement('button')
+botao.appendChild(id)
+
+
+
+// -----------Eventos------------------
+// Muito direcionada a eventos, acoes realizadas do browser
+// os eventos dependem do tipo de elemnto que eu estou usando, cada elemnto tem seu evento
+// Mostrar os elementos vinculados a propria tag, colocar um eventos la e mostrar no console
+
+
+function cliquei2() {
+  console.log('cliquei');
+
+}
