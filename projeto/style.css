@@ -20,10 +20,12 @@ body {
   align-items: center;
 }
 
-
-
 .checked:before {
   content: "🟣";
+}
+
+.deleta{
+  cursor: pointer;
 }
 
 .container_principal {

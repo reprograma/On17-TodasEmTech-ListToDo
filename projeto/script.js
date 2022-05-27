@@ -15,18 +15,14 @@ const form = document.getElementById('form_id');
 
 const botaoLimpa = document.getElementById('botao_limpa_id');
 
-//funcao de add a partir do click o evento que mostrara o formulario 
+const botaoMarca = document.getElementById('botao_marca_id')
 
-novaTarefaInput.addEventListener('input', (evento)=> {
+novaTarefaInput.addEventListener('input', (evento) => {
     evento.preventDefault()
-    console.log(evento.target.value)
-
-    if(evento.target.value != ''){
-        botaoModificado.style.backgroundColor = '#c8d6e5'
-        botaoModificado.placeholder = "Adicione uma tarefa";
-    }
-
+    novaTarefaInput.placeholder = "Adicione uma tarefa"
+    novaTarefaInput.style.backgroundColor = "#f3f3f3"
 })
+
 
 botaoAdd.addEventListener('click', (evento) => {
     evento.preventDefault()
@@ -35,16 +31,16 @@ botaoAdd.addEventListener('click', (evento) => {
     const textoTarefa = document.createElement('p')
     const iconeDeleta = document.createElement('span')
 
-    console.log(novaTarefaInput.value)
+   
     if (novaTarefaInput.value.trim() === '') {
         novaTarefaInput.value = ""
-        botaoModificado.placeholder = "digite apenas caracteres";
-        botaoModificado.style.backgroundColor = '#d27171';
-        
+        novaTarefaInput.placeholder = "digite algo"
+        novaTarefaInput.style.backgroundColor = "#ac494970"
     } else {
         textoTarefa.innerText = novaTarefaInput.value
         iconeDeleta.innerText = "🗑️"
-    
+        iconeDeleta.style.cursor = "pointer"
+       
         listaDeTarefas.appendChild(elementoLista)
         elementoLista.appendChild(textoTarefa)
         elementoLista.appendChild(iconeDeleta)
@@ -82,4 +78,22 @@ botaoLimpa.addEventListener('click', () => {
     listaDeTarefas.innerHTML = ''
     modelo.style.display = 'flex'
     containerDeTarefas.style.display = 'none'
+    botaoMarca.innerText = "Marcar todos"
+}) 
+
+botaoMarca.addEventListener('click', () => {
+    if (listaDeTarefas.innerText === '') return
+    let todasAsTarefas = document.querySelectorAll('p')
+    if(botaoMarca.innerText === 'Marcar todos'){
+        todasAsTarefas.forEach((tarefa) => {
+            tarefa.classList.add('checked')
+        })  
+        botaoMarca.innerText = "desmarcar todos"
+    } else {
+        todasAsTarefas.forEach((tarefa) =>{
+            tarefa.classList.remove('checked')
+        })
+        botaoMarca.innerText = "Marcar todos"
+    }
 })
+
