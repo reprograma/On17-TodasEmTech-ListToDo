@@ -1,4 +1,3 @@
-
 //Capturar entradas/elementos em variáveis
 
 const novaTarefaInput = document.querySelector('#input_id')
@@ -13,7 +12,7 @@ const containerDeTarefas = document.getElementById('tarefas_id')
 const form =  document.getElementById('form_id')
 // capturando meu formulário
 const botaoLimpa = document.getElementById('botao_limpa_id'); // capturando o botão 'marcar Limpar lista'
-
+const botaoMarca = document.getElementById('botao_marca_id'); //capturando o botão "marcar todos"
 
 
 // função de adicionar a partir do click da usuária, um evento
@@ -28,7 +27,13 @@ botaoAdd.addEventListener('click', (evento) => {
 
 
     if(novaTarefaInput.value.trim() === '') {
-        alert("digite alguma tarefa") 
+        //alert("digite alguma tarefa") 
+
+      novaTarefaInput.classList.add('erro'); //adiciona a classe erro do css ao input
+      novaTarefaInput.placeholder = "Por favor, digite uma tarefa." 
+      novaTarefaInput.addEventListener ('animationend', event => {
+        novaTarefaInput.classList.remove ('erro');
+       })
 
     } else {
     
@@ -60,6 +65,13 @@ botaoAdd.addEventListener('click', (evento) => {
 
     })
 
+    
+botaoMarca.addEventListener("click", () => {
+    textoTarefa.classList.toggle("checked")
+      ? (botaoMarca.textContent = "Desmarcar Todas")
+      : (botaoMarca.textContent = "Marcar Todas");
+  });
+
     iconeDeleta.addEventListener('click', () => {
         elementoLista.remove()
 
@@ -80,6 +92,7 @@ botaoLimpa.addEventListener('click', () => {
     modelo.style.display = 'flex'
     containerDeTarefas.style.display = 'none'
 })
+
 
 
 
