@@ -13,6 +13,8 @@ const form = document.getElementById('form_id')
 //capturando o formularuio
 const botaoLimpa = document.getElementById('botao_limpa_id')
 // caputura o botao limpa
+const botaoMarca = document.getElementById('botao_marca_id')
+// captura o botao de marcar
 
 
 
@@ -26,10 +28,26 @@ botaoAdd.addEventListener('click', (evento) => {
     const iconeDeleta = document.createElement('span')
     // cria o item da lista que nao existe no HTML
 
-    if(novaTarefaInput.value.trim() === '') {
-        alert ("Digite alguma tarefa")
+    if(novaTarefaInput.value.trim() === '' || novaTarefaInput.value.length === 0 ) {
 
-    } else  {        
+        //alert ("Digite alguma tarefa")   
+        //var txtInc = 
+        //document.getElementById("input_id").style.borderColor="#FF0000";   
+        // se não encontrar nenhuma tarefa digitada adicionar uma alerta em vermelho no input
+        //<!--------------------- DESAFIO 1 ---------->
+              
+        novaTarefaInput.classList.add('erro');
+        novaTarefaInput.classList.add('placeholder_red');
+        
+        novaTarefaInput.addEventListener('animationend', event => {
+            novaTarefaInput.classList.remove('erro');
+            
+        })        
+
+        
+    } else  {
+        
+        novaTarefaInput.classList.remove("placeholder_red")
     
         textoTarefa.innerText = novaTarefaInput.value 
         // iguala dentro do parágrafo criado para ser igual ao valor digitado no input
@@ -45,8 +63,9 @@ botaoAdd.addEventListener('click', (evento) => {
         //tela por padrao tudo tem display block no html
          
         form.reset() // reseta o formulario para n aparecer no input o ultimo texto
-    
-    
+        
+        document.getElementById("input_id").style.border = '1px solid #999'
+        // se estiver correto ele adiciona uma cor verde
     }  
 
     textoTarefa.addEventListener('click', () => {
@@ -58,8 +77,6 @@ botaoAdd.addEventListener('click', (evento) => {
         //     textoTarefa.classList.remove('checked')
         // } 
         textoTarefa.classList.toggle('checked') //forma mais simples de fazer 
-    
-    
     })
 
     iconeDeleta.addEventListener('click', () => {
@@ -76,11 +93,36 @@ botaoAdd.addEventListener('click', (evento) => {
     })
 
     botaoLimpa.addEventListener ('click', () => {
-        listaDeTarefas.remove()
-        //listaDeTarefas.innerHTML = ''
+        //listaDeTarefas.remove()
+        listaDeTarefas.innerHTML = ''
         modelo.style.display = 'flex'
         containerDeTarefas.style.display = 'none'
     })
+
+    botaoMarca.addEventListener('click', () => {
+        let todasAsTarefas = document.querySelectorAll('p')
+
+        if(botaoMarca.innerText === "Marcar tudo") {
+            todasAsTarefas.forEach((tarefa) => {
+                tarefa.classList.add('checked')
+            })
+            botaoMarca.innerText = "Desmarcar tudo"
+        } else {
+            todasAsTarefas.forEach((tarefa) => {
+                tarefa.classList.remove("checked")
+            })
+            
+            botaoMarca.innerText = "Marcar tudo"
+        }
+        
+    })
+
+    
+    
+
+    
+
+    
 
 
 

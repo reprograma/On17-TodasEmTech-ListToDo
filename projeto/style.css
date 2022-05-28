@@ -8,14 +8,17 @@
   box-sizing: border-box;
   list-style: none;
   font-size: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;
+  font-weight: 300;
 }
 
 body {
+  
   min-height: 100vh;
   width: 100%;
-  background-color: #ff9ff370;
+  background: hsl(235, 21%, 11%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -24,10 +27,12 @@ body {
 
 .checked:before {
   content: "🟣";
+  
 }
 
+
 .container_principal {
-  background-color: #f3f3f3;
+  background-color: hsl(235, 24%, 19%);
   min-width: 40rem; /* 400px */
   max-height: 60vh;
   padding: 2.5rem;
@@ -36,13 +41,14 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  box-shadow: 2px 4px 10px #57657450;
+  box-shadow: 2px 4px 15px hsl(230, 38%, 6%);
 }
 
 .titulo_lista {
   margin: 2rem 0 3rem 0;
   font-size: 2.5rem;
-  color: #2e86de;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 /* formulario */
@@ -71,7 +77,7 @@ body {
 }
 
 .button_add  {
-  background-color: #54a0ff;
+  background-color: #7360cf;
   color: #f3f3f3;
   padding: 0 1rem;  
   font-size: 1.5rem;
@@ -83,7 +89,7 @@ body {
 }
 
 .button_add:hover {
-  background-color: #2e86de;
+  background-color: #181f27;
   transition: linear .3s;
 }
 
@@ -107,7 +113,7 @@ body {
 li {
   display: flex;
   justify-content: space-between;
-  color: #222f3e;
+  color: hsl(234, 39%, 85%);
   padding: .8rem .5rem;
 }
 
@@ -159,6 +165,8 @@ li > p {
 
 /* container dos botões */
 
+
+
 .container_botoes {
   width: 95%;
   display: flex;
@@ -167,13 +175,13 @@ li > p {
 }
 
 .button_marca {
-  background: #54a0ff;
+  background: #417ac0;
   border: solid 1px #54a0ff;
 }
 
 .button_limpa {
-  background: #f368e0;
-  border: solid 1px #f368e0;
+  background: #8f6332;
+  border: solid 1px #b6773c;
 }
 
 .button_limpa, .button_marca {
@@ -196,6 +204,24 @@ li > p {
   color: #f368e0;
   transition: linear .3s;
 }
+
+.erro {
+  animation: treme 0.1s; 
+  animation-iteration-count: 3;
+} 
+
+@keyframes treme {
+  0% {margin-left: 0;}
+  25% {margin-left: 5px;}
+  50% {margin-left: 0;}
+  75% {margin-left: -5px;}
+  100% {margin-left: 0;}
+}
+
+.placeholder_red::placeholder {
+  color: red;
+}
+
 
 
 /* responsividade */
