@@ -4,7 +4,8 @@ const listaDeTarefas = document.getElementById("lista_id");
 const modelo = document.getElementById("modelo_id");
 const containerDeTarefas = document.getElementById("tarefas_id");
 const form = document.getElementById("form_id");
-const botaoLimpa = document.getElementById("botao_limpa_id");
+const botaoLimpar = document.getElementById("botao_limpa_id");
+const botaoMarcar = document.getElementById("botao_marca_id");
 
 botaoAdd.addEventListener("click", (evento) => {
   evento.preventDefault();
@@ -14,10 +15,14 @@ botaoAdd.addEventListener("click", (evento) => {
   const iconeDeleta = document.createElement("span");
 
   if (novaTarefaInput.value.trim() === "") {
-    alert("digite alguma tarefa");
+    novaTarefaInput.classList.add("erro");
+    novaTarefaInput.placeholder = "Digite alguma tarefa!";
+    novaTarefaInput.addEventListener("animationend", (event) => {
+      novaTarefaInput.classList.remove("erro");
+    });
   } else {
     textoTarefa.innerText = novaTarefaInput.value;
-    iconeDeleta.innerText = "";
+    iconeDeleta.innerText = "🗑️";
 
     listaDeTarefas.appendChild(elementoLista);
     elementoLista.appendChild(textoTarefa);
@@ -29,13 +34,13 @@ botaoAdd.addEventListener("click", (evento) => {
   }
 
   textoTarefa.addEventListener("click", () => {
-    // if(!textoTarefa.classList.contains('checked')) {
-    //    // verifica se o paragrafo da tarefa criada não tem a classe checked e então adiciona
-    // textoTarefa.classList.add('checked')
-    // } else {
-    //     textoTarefa.classList.remove('checked')
-    // }
     textoTarefa.classList.toggle("checked");
+  });
+
+  botaoMarcar.addEventListener("click", () => {
+    textoTarefa.classList.toggle("checked")
+      ? (botaoMarcar.textContent = "Desmarcar Todas")
+      : (botaoMarcar.textContent = "Marcar Todas");
   });
 
   iconeDeleta.addEventListener("click", () => {
@@ -48,7 +53,7 @@ botaoAdd.addEventListener("click", (evento) => {
   });
 });
 
-botaoLimpa.addEventListener("click", () => {
+botaoLimpar.addEventListener("click", () => {
   listaDeTarefas.innerHTML = "";
   modelo.style.display = "flex";
   containerDeTarefas.style.display = "none";
