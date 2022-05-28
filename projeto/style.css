@@ -14,7 +14,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: #ff9ff370;
+  background-color: #eae2b7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ body {
 .titulo_lista {
   margin: 2rem 0 3rem 0;
   font-size: 2.5rem;
-  color: #2e86de;
+  color: #f77f00;
 }
 
 /* formulario */
@@ -71,7 +71,7 @@ body {
 }
 
 .button_add  {
-  background-color: #54a0ff;
+  background-color: #003049;
   color: #f3f3f3;
   padding: 0 1rem;  
   font-size: 1.5rem;
@@ -83,7 +83,7 @@ body {
 }
 
 .button_add:hover {
-  background-color: #2e86de;
+  background-color: #0081a7;
   transition: linear .3s;
 }
 
@@ -148,7 +148,7 @@ li > p {
 
 .modelo_conteudo {
   padding: .8rem .5rem;
-  background: #c3f3d990;
+  background: #eae2b7;
   border-radius: .5rem;
 }
 
@@ -167,13 +167,13 @@ li > p {
 }
 
 .button_marca {
-  background: #54a0ff;
-  border: solid 1px #54a0ff;
+  background: #003049;
+  border: solid 1px #003049;
 }
 
 .button_limpa {
-  background: #f368e0;
-  border: solid 1px #f368e0;
+  background: #d62828;
+  border: solid 1px #d62828;
 }
 
 .button_limpa, .button_marca {
@@ -187,13 +187,13 @@ li > p {
 
 .button_marca:hover {
   background: #f3f3f3;
-  color: #54a0ff;
+  color: #003049;
   transition: linear .3s;
 }
 
 .button_limpa:hover {
   background: #f3f3f3;
-  color: #f368e0;
+  color: #d62828;
   transition: linear .3s;
 }
 
@@ -265,3 +265,27 @@ li > p {
     margin-top: .5rem ;
   }
 }
+
+.erro {
+  animation: alerta 4s;
+}
+
+@keyframes alerta {
+  0% {
+    border: solid 1px #ee5253;
+    background-color: #ff6b6b50;
+  }
+  25% {
+    border: solid 1px #c8d6e5;
+  }
+  50% {
+    border: solid 1px #ee5253;
+  }
+  75% {
+    border: solid 1px #c8d6e5;
+  }
+  100% {
+    border: solid 1px #ee5253;
+    background-color: #ff6b6b50;
+  }
+} 
