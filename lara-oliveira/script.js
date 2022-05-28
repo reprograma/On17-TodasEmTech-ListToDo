@@ -14,6 +14,8 @@ const form = document.getElementById('form_id');
 
 const botaoLimpa = document.getElementById('botao_limpa_id');
 
+const botaoMarca = document.getElementById('botao_marca_id');
+
 //capturando a lista que vai guardar as tarefas
 
 
@@ -31,12 +33,19 @@ botaoAdd.addEventListener('click', (evento) => {
 
     const iconeDeleta = document.createElement('span'); 
 
+    const inputStyle = document.querySelector('.input_add');
+
     //trim() - remove espaços em branco 
 
     if(novaTarefaInput.value.trim() === '') {
-        alert("digite alguma tarefa")
+
+        inputStyle.style.backgroundColor = '#E75A7C';
+        document.getElementsByName('tarefa')[0].placeholder = 'Você não digitou uma tarefa';
+        
     } else {
-            
+                
+    inputStyle.style.backgroundColor = '#c8d6e5';
+    document.getElementsByName('tarefa')[0].placeholder = 'Adicione uma tarefa';
 
     textoTarefa.innerText = novaTarefaInput.value;
 
@@ -81,6 +90,24 @@ botaoAdd.addEventListener('click', (evento) => {
 
         modelo.style.display = 'flex'
         containerDeTarefas.style.display = 'none'
+    })
+
+    botaoMarca.addEventListener('click', () => {
+
+        if(botaoMarca.innerText === 'Marcar todas') {
+            const todasAsTarefas = document.querySelectorAll('p');
+            todasAsTarefas.forEach(item => {
+                item.classList.add('checked');
+            });
+            botaoMarca.innerText = 'Desmarcar todas'
+            
+        } else {
+            const todasAsTarefas = document.querySelectorAll('p');
+            todasAsTarefas.forEach(item => {
+                item.classList.remove('checked');
+            });
+            botaoMarca.innerText = 'Marcar todas'
+        }    
     })
 });
 
