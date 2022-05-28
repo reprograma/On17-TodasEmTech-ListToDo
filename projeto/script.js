@@ -21,7 +21,8 @@ botaoAdd.addEventListener("click", (evento) => {
   const iconeDeleta = document.createElement("span"); // cria o nome da lista que não está no html
 
   if (novaTarefaInput.value.trim() === "") {
-    alert("digite alguma tarefa");
+    novaTarefaInput.placeholder="Digite alguma tarefa"
+    novaTarefaInput.style.backgroundColor="#f77272";
   } else {
     textoTarefa.innerText = novaTarefaInput.value;
     // adiciona dentro do paragrafo criado para ser igual ao valor digitado no input
@@ -59,6 +60,11 @@ botaoAdd.addEventListener("click", (evento) => {
     }
   });
 });
+
+novaTarefaInput.addEventListener('keypress', ()=>{
+  novaTarefaInput.style.backgroundColor = "#c8d6e5";
+  novaTarefaInput.placeholder = "Adicione uma tarefa"
+} )
 
 botaoLimpa.addEventListener("click", () => {
   listaDeTarefas.innerHTML = "";
