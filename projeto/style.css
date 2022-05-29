@@ -39,6 +39,11 @@ body {
   box-shadow: 2px 4px 10px #57657450;
 }
 
+/*#container {
+  animation: nono 300ms;
+}*/
+  
+
 .titulo_lista {
   margin: 2rem 0 3rem 0;
   font-size: 2.5rem;
@@ -80,6 +85,7 @@ body {
   border: none;
   cursor: pointer;
   transition: linear .3s;
+  animation: nono 500ms;
 }
 
 .button_add:hover {
@@ -220,6 +226,7 @@ li > p {
     width: 100%;
     border-radius: .8rem;
     font-size: 1.2rem;
+    
   }
 
   .input_add:focus {
@@ -231,6 +238,7 @@ li > p {
     font-size: 1.3rem;
     border-radius: .8rem;
     margin-top: .5rem;
+  
   }
 
   li {
@@ -265,3 +273,23 @@ li > p {
     margin-top: .5rem ;
   }
 }
+ /*botão nono*/
+
+ /*form.validate-error {
+  animation: nono 500ms;
+ }*/
+
+ @keyframes nono {
+   0% {
+    transform: translateX(0);
+   }
+   35% {
+    transform: translateX(-15%);
+   }
+   70% {
+    transform: translateX(15%);
+   }
+   100% {
+    transform: translateX(0);
+   }
+ }
