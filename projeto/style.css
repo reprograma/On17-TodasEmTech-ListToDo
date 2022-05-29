@@ -27,7 +27,7 @@ body {
 
 @keyframes alerta {
   0% {
-    border: solid 1px #ee5253;
+    border: solid 1px #ee2618;
     background-color: #ff6b6b50;
   }
   25% {
