@@ -55,29 +55,15 @@ botaoAdd.addEventListener('click', (evento) => {
     
         modelo.style.display = 'none'
         containerDeTarefas.style.display = "block" // coloca  div de tarefas com display block para elas aprarecerem na tela por padrao tudo tem display block no html
-         
+
         form.reset() // reseta o formulário para n aparecer no input o ultimo texto
     }
 
     textoTarefa.addEventListener('click', () => {
 
-        // if(!textoTarefa.classList.contains('checked')) {
-        //    // verifica se o paragrafo da tarefa criada não tem a classe checked e então adiciona
-        // textoTarefa.classList.add('checked')
-        // } else {
-        //     textoTarefa.classList.remove('checked')
-        // } 
-
         textoTarefa.classList.toggle('checked') //forma mais simples de fazer 
 
     })
-
-    // Mais uma resolução para o Desafio 2 --------
-    // botaoMarca.addEventListener("click", () => {
-    //     textoTarefa.classList.toggle("checked")
-    //     ? (botaoMarca.textContent = "Desmarcar Todas")
-    //     : (botaoMarca.textContent = "Marcar Todas");
-    //     }); 
     
 
     iconeDeleta.addEventListener('click', () => {
