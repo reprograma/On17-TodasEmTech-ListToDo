@@ -12,7 +12,7 @@ const containerDeTarefas = document.getElementById("tarefas_id");
 const form = document.getElementById("form_id");
 // capturando meu formulário
 const botaoLimpa = document.getElementById("botao_limpa_id"); // capturando o botão 'marcar Limpar lista'
-
+const botaoMarcar = document.getElementById("botao_marca_id"); // capturando o botão 'marcar todas'
 // função de adicionar a partir do click da usuária, um evento
 //  mostrar que com o formulário e o evento de submit a tarefa tb seria criada
 botaoAdd.addEventListener("click", (evento) => {
@@ -24,14 +24,22 @@ botaoAdd.addEventListener("click", (evento) => {
   // cria o item da lista que nao existe no HTML
 
   if (novaTarefaInput.value.trim() === "") {
-    alert("digite alguma tarefa");
+    //alert("digite alguma tarefa");
+    novaTarefaInput.classList.add("erro"); //adiciona classe erro ao elemento novaTarefa (input) - a classe está no css
+
+    novaTarefaInput.placeholder = "Digite alguma tarefa!";
+
+    novaTarefaInput.addEventListener("animationend", (event) =>
+      novaTarefaInput.classList.replace("erro", " "),
+    );
+    // não está retornando ao estado anterior, pensar numa forma de resolver isso
   } else {
     textoTarefa.innerText = novaTarefaInput.value;
     // iguala dentro do parágrafo criado para ser igual ao valor digitado no input
     iconeDeleta.innerText = "🗑";
-    // adiciona dentro do spam criado esse icone de lixeiro
+    // adiciona dentro do spam criado esse icone de lixeira
 
-    listaDeTarefas.appendChild(elementoLista); //elemento ul do HTML adotando o item da lista craido mais em cima
+    listaDeTarefas.appendChild(elementoLista); //elemento ul do HTML adotando o item da lista criado mais em cima
     elementoLista.appendChild(textoTarefa); // o item da lista adotando o texto criado mais em cima
     elementoLista.appendChild(iconeDeleta); // o item da lista tb adota o lixeiro junto com o texto
 
@@ -65,7 +73,32 @@ botaoAdd.addEventListener("click", (evento) => {
 
 botaoLimpa.addEventListener("click", () => {
   //listaDeTarefas.remove();
-  listaDeTarefas.innerHTML = ''
+  listaDeTarefas.innerHTML = "";
   modelo.style.display = "flex";
   containerDeTarefas.style.display = "none";
+});
+
+//Desafio2
+//  botaoMarcar.addEventListener("click", () => {
+//        textoTarefa.classList.toggle("checked")
+//          ? (botaoMarcar.textContent = "Desmarcar Todas")
+//         : (botaoMarcar.textContent = "Marcar Todas");
+//        });
+
+botaoMarcar.addEventListener("click", () => {
+  let todasAsTarefas = document.querySelectorAll("p");
+  //   // pega todos os paragrafos do container de tarefas criadas
+
+  if (botaoMarcar.innerText === "Marcar todos") {
+    // verifica se o botào é marcar todos adicionando uma classe
+    todasAsTarefas.forEach((tarefa) => {
+      tarefa.classList.add("checked");
+    });
+    botaoMarcar.innerText = "Desmarcar todos";
+  } else {
+    todasAsTarefas.forEach((tarefa) => {
+      tarefa.classList.remove("checked");
+    });
+    botaoMarcar.innerText = "Marcar todos";
+  }
 });

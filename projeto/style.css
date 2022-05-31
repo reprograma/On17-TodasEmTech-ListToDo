@@ -87,6 +87,10 @@ body {
   transition: linear .3s;
 }
 
+.erro::placeholder{
+  color: red;
+  opacity: 1;
+}
 /* container de tarefas */
 
 .container_tarefas {
