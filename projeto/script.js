@@ -29,7 +29,7 @@ botaoAdd.addEventListener('click', (evento) => {
 
 
     if(novaTarefaInput.value.trim() === '') {
-        // alert("digite alguma tarefa") 
+        alert("digite alguma tarefa") 
 
     // ----------- DESAFIO 1 --------------
 
