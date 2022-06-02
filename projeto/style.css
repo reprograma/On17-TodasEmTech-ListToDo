@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 
-/*----------- DESAFIO 1 ------------ */
+
 .erro {
   animation: alerta .3s linear;
 } /* classe criada para mudar estilo do input quando vazio*/
