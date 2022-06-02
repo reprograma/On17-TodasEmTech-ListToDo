@@ -31,7 +31,7 @@ botaoAdd.addEventListener('click', (evento) => {
     if(novaTarefaInput.value.trim() === '') {
         // alert("digite alguma tarefa") 
 
-    // ----------- DESAFIO 1 --------------
+    
 
     novaTarefaInput.classList.add('erro'); //adiciona classe erro ao elemento novaTarefa (input) - a classe está no css
     // novaTarefaInput.setAttribute("placeholder", "Campo obrigatório"); 
@@ -102,8 +102,6 @@ botaoLimpa.addEventListener('click', () => {
 })
 
 
-// // -------DESAFIO 2--------
-// // função para marcar todas as tarefas:
 
 botaoMarca.addEventListener('click', () => {
   let todasAsTarefas = document.querySelectorAll('p')
