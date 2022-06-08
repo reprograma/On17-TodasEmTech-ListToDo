@@ -20,6 +20,31 @@ body {
   align-items: center;
 }
 
+/*----------- DESAFIO 1 ------------ */
+.erro {
+  animation: alerta .3s linear;
+} /* classe criada para mudar estilo do input quando vazio*/
+
+@keyframes alerta {
+  0% {
+    border: solid 1px #ee5253;
+    background-color: #ff6b6b50;
+  }
+  25% {
+    border: solid 1px #c8d6e5;
+  }
+  50% {
+    border: solid 1px #ee5253;
+  }
+  75% {
+    border: solid 1px #c8d6e5;
+  }
+  100% {
+    border: solid 1px #ee5253;
+    background-color: #ff6b6b50;
+  }
+} /* --------- animação usada no erro ------------*/
+
 
 
 .checked:before {
